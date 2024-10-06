@@ -13,6 +13,16 @@ func _ready() -> void:
 	$AnimatedSprite2D.animation = "idle"
 	$AnimatedSprite2D.play()
 
+func playRatAttackNoise():
+	var rng = randi_range(0,2)
+	match rng:
+		0:
+			$"SwordSwing-1".play()
+		1:
+			$"SwordSwing-2".play()
+		2:
+			$"SwordSwing-3".play()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_dead:
@@ -21,12 +31,20 @@ func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
+		if not $"Walking-1".is_playing():
+			$"Walking-1".play()
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
+		if not $"Walking-2".is_playing():
+			$"Walking-2".play()
 	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
+		if not $"Walking-3".is_playing():
+			$"Walking-3".play()
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+		if not $"Walking-3".is_playing():
+			$"Walking-3".play()
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -45,6 +63,7 @@ func _process(delta):
 	elif Input.is_action_pressed("attack"):
 		$AnimatedSprite2D.animation = "attack_side"
 		$AnimatedSprite2D.play()
+		playRatAttackNoise()
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.play()
@@ -61,13 +80,16 @@ func _process(delta):
 func _on_body_entered(body: Node2D) -> void:
 	if Input.is_action_pressed("attack"):
 		rat_kills(body)
+		$"RatHitRoach-1".play()
 	else:
 		rat_dies()
+		
 
 func rat_dies():
 	is_dead = true
 	$AnimatedSprite2D.animation = "death"
 	$AnimatedSprite2D.play()
+	$"RatKO-1".play()
 	death.emit()
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)

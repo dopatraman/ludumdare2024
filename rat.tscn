@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bu24t6ilr7bsr"]
+[gd_scene load_steps=53 format=3 uid="uid://bu24t6ilr7bsr"]
 
 [ext_resource type="Script" path="res://rat.gd" id="1_kspmh"]
 [ext_resource type="Texture2D" uid="uid://ohhddtgvkn2b" path="res://art/idle/1_Rat_Idle.png" id="1_scyqv"]
@@ -39,6 +39,17 @@
 [ext_resource type="Texture2D" uid="uid://jtigs8kmjrlj" path="res://art/attack_up/5_Rat_AttackUp.png" id="17_2t2fi"]
 [ext_resource type="Texture2D" uid="uid://c8y3c72ds7ibe" path="res://art/run/12_Rat_Run.png" id="17_jvl11"]
 [ext_resource type="Texture2D" uid="uid://c37pllm15lfis" path="res://art/attack_up/6_Rat_AttackUp.png" id="18_y8gmv"]
+[ext_resource type="AudioStream" uid="uid://cls4gm24ij1rb" path="res://sound/sound-fx_rat/Rat Footsteps 2.wav" id="40_8mn6j"]
+[ext_resource type="AudioStream" uid="uid://12pa1ut1kxo1" path="res://sound/sound-fx_rat/Rat Footsteps Alt 3.wav" id="41_pgrln"]
+[ext_resource type="AudioStream" uid="uid://c61jtkethmhwi" path="res://sound/sound-fx_rat/Rat Footsteps Alt Option.wav" id="42_bonlo"]
+[ext_resource type="AudioStream" uid="uid://cbs5yihdojiof" path="res://sound/sound-fx_rat/Side Attack- Sword Swish.wav" id="43_mubkf"]
+[ext_resource type="AudioStream" uid="uid://djbtv3wqmhpev" path="res://sound/sound-fx_rat/Side Attack 2- Sword Swish.wav" id="44_ld7xs"]
+[ext_resource type="AudioStream" uid="uid://bfubapnea8qj7" path="res://sound/sound-fx_rat/Sword_Metal - Metallic Swing .wav" id="45_131xd"]
+[ext_resource type="AudioStream" uid="uid://c4w3kd40orxlv" path="res://sound/sound-fx_rat/Rat Hitting Roach w Sword.wav" id="46_nexqm"]
+[ext_resource type="AudioStream" uid="uid://cbxcw7i76ib6e" path="res://sound/sound-fx_rat/Rat gettin hit by roach (variation 2).wav" id="47_5tv2r"]
+[ext_resource type="AudioStream" uid="uid://bfs81s3x41ijq" path="res://sound/sound-fx_rat/rat gettin hit_sawed by roach.wav" id="48_cguwx"]
+[ext_resource type="AudioStream" uid="uid://dxjhhmchweug3" path="res://sound/sound-fx_rat/roach hitting rat (alt).wav" id="49_kijdm"]
+[ext_resource type="AudioStream" uid="uid://cmvcawfov1d2i" path="res://sound/sound-fx_rat/Rat KO_Falling on back.wav" id="50_llw3q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_smcku"]
 animations = [{
@@ -203,6 +214,39 @@ animation = &"death"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12.5, 84)
 shape = SubResource("RectangleShape2D_floc5")
+
+[node name="Walking-1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("40_8mn6j")
+
+[node name="Walking-2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("41_pgrln")
+
+[node name="Walking-3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("42_bonlo")
+
+[node name="SwordSwing-1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("43_mubkf")
+
+[node name="SwordSwing-2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("44_ld7xs")
+
+[node name="SwordSwing-3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("45_131xd")
+
+[node name="RatHitRoach-1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("46_nexqm")
+
+[node name="RoachHitRat-1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("47_5tv2r")
+
+[node name="RoachHitRat-2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("48_cguwx")
+
+[node name="RoachHitRat-3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("49_kijdm")
+
+[node name="RatKO-1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("50_llw3q")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

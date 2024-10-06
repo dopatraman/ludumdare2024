@@ -13,15 +13,20 @@ func _process(delta: float) -> void:
 
 func game_over():
 	$Music.stop()
+	$CaveAmbience.stop()
 	$GameOverDefeatSound.play()
 	$StartScreen.show_game_over()
+	
+	#add game over victory sound + logic for victory
+	#GameOverVictorySound.play()
 
 func new_game():
 	score = 0
 	$Music.play()
+	$CaveAmbience.play()
 	$StartPosition.position = get_viewport().size / 2
 	$Rat.start($StartPosition.position)
-	$StartScreen.show_message("Get Ready!")
+	$StartScreen.show_message("Survive.")
 	$RoachTimer.start()
 	get_tree().call_group("roaches", "queue_free")
 
@@ -52,6 +57,7 @@ func _on_roach_timer_timeout() -> void:
 
 	# Spawn the roach by adding it to the Main scene.
 	add_child(roach)
+	$roachAppears.play()
 
 
 func _on_rat_kills(roach: Node2D) -> void:

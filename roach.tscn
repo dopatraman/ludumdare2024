@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://l7plyps38d7c"]
+[gd_scene load_steps=29 format=3 uid="uid://l7plyps38d7c"]
 
 [ext_resource type="Script" path="res://roach.gd" id="1_i7old"]
 [ext_resource type="Texture2D" uid="uid://6caxo5j7rap5" path="res://art/c_attack_side/1_SideAttack_Cockroach.png" id="2_8prw1"]
@@ -21,6 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://b1krmsan7iqy8" path="res://art/c_attack_side/10_SideAttack_Cockroach.png" id="11_1mjyl"]
 [ext_resource type="Texture2D" uid="uid://dciib4d8tnkkq" path="res://art/c_attack_side/11_SideAttack_Cockroach.png" id="12_e0q1p"]
 [ext_resource type="Texture2D" uid="uid://7fdn847qjrps" path="res://art/c_attack_side/12_SideAttack_Cockroach.png" id="13_8buog"]
+[ext_resource type="AudioStream" uid="uid://befyqwgsjq1yv" path="res://sound/sound-fx_cockroach/Cockroach Stabbed 2 Death_KO.wav" id="22_c65xd"]
+[ext_resource type="AudioStream" uid="uid://dg0vj8qhoybrb" path="res://sound/sound-fx_cockroach/Roach Death - NEW.wav" id="23_vde0h"]
+[ext_resource type="AudioStream" uid="uid://6cgndvxjgc5g" path="res://sound/sound-fx_cockroach/Roach Death New - Alt.wav" id="24_yiwox"]
+[ext_resource type="AudioStream" uid="uid://dcke1qs5o4mfq" path="res://sound/sound-fx_cockroach/Roach Down Attack.wav" id="25_l75c6"]
+[ext_resource type="AudioStream" uid="uid://c1wf71plrepop" path="res://sound/sound-fx_cockroach/Roach Side Attack- Saw Swish.wav" id="26_an65a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ups8b"]
 animations = [{
@@ -122,5 +127,20 @@ shape = SubResource("RectangleShape2D_hyy12")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-17, 17.5)
 scale = Vector2(8.3, 10.55)
+
+[node name="death1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_c65xd")
+
+[node name="death2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_vde0h")
+
+[node name="death3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_yiwox")
+
+[node name="attack1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_l75c6")
+
+[node name="attack2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_an65a")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
