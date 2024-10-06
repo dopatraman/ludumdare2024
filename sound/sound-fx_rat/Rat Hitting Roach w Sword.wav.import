@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4w3kd40orxlv"
+path="res://.godot/imported/Rat Hitting Roach w Sword.wav-9a95935a71075e7d840f3e6aa79ecd13.sample"
+
+[deps]
+
+source_file="res://sound/sound-fx_rat/Rat Hitting Roach w Sword.wav"
+dest_files=["res://.godot/imported/Rat Hitting Roach w Sword.wav-9a95935a71075e7d840f3e6aa79ecd13.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

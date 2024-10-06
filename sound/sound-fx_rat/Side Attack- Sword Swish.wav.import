@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbs5yihdojiof"
+path="res://.godot/imported/Side Attack- Sword Swish.wav-e402f3ef18c5b97dc27f43c5a8cc0567.sample"
+
+[deps]
+
+source_file="res://sound/sound-fx_rat/Side Attack- Sword Swish.wav"
+dest_files=["res://.godot/imported/Side Attack- Sword Swish.wav-e402f3ef18c5b97dc27f43c5a8cc0567.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
