@@ -42,6 +42,8 @@ grow_vertical = 2
 scale = Vector2(1.6, 1)
 texture = ExtResource("2_ncyl4")
 
+[node name="StartScreen" parent="." instance=ExtResource("3_ly3oy")]
+
 [node name="Rat" parent="." instance=ExtResource("2_x8643")]
 position = Vector2(517, 4)
 
@@ -53,10 +55,6 @@ stream = SubResource("AudioStreamMP3_8ucoe")
 
 [node name="StartPosition" type="Marker2D" parent="."]
 
-[node name="StartScreen" parent="." instance=ExtResource("3_ly3oy")]
-offset = Vector2(200, 200)
-transform = Transform2D(1, 0, 0, 1, 200, 200)
-
 [node name="RoachPath" type="Path2D" parent="."]
 curve = SubResource("Curve2D_87iti")
 
@@ -67,6 +65,6 @@ rotation = -0.00606053
 [node name="RoachTimer" type="Timer" parent="."]
 wait_time = 2.0
 
-[connection signal="death" from="Rat" to="." method="game_over"]
 [connection signal="start_game" from="StartScreen" to="." method="_on_start_screen_start_game"]
+[connection signal="death" from="Rat" to="." method="game_over"]
 [connection signal="timeout" from="RoachTimer" to="." method="_on_roach_timer_timeout"]

@@ -23,8 +23,10 @@ func show_game_over():
 	await $MessageTimer.timeout
 
 	$Message.text = "Pizza Rat"
-	$Message.show()
+	#$Message.show()
 	# Make a one-shot timer and wait for it to finish.
+	$brickbackground.show()
+	$ratpizzalogo.show()
 	await get_tree().create_timer(1.0).timeout
 	$StartButton.show()
 
@@ -35,4 +37,6 @@ func _on_message_timer_timeout() -> void:
 
 func _on_start_button_pressed() -> void:
 	$StartButton.hide()
+	$brickbackground.hide()
+	$ratpizzalogo.hide()
 	start_game.emit()
