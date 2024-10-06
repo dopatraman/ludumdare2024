@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmvcawfov1d2i"
+path="res://.godot/imported/Rat KO_Falling on back.wav-ef5a831ad6eaa8acc66defdf52763113.sample"
+
+[deps]
+
+source_file="res://sound/sound-fx_rat/Rat KO_Falling on back.wav"
+dest_files=["res://.godot/imported/Rat KO_Falling on back.wav-ef5a831ad6eaa8acc66defdf52763113.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

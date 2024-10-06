@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cls4gm24ij1rb"
+path="res://.godot/imported/Rat Footsteps 2.wav-2536eb67db763e9d11a9b42f06ebb989.sample"
+
+[deps]
+
+source_file="res://sound/sound-fx_rat/Rat Footsteps 2.wav"
+dest_files=["res://.godot/imported/Rat Footsteps 2.wav-2536eb67db763e9d11a9b42f06ebb989.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
