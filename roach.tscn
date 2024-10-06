@@ -1,29 +1,103 @@
-[gd_scene load_steps=8 format=3 uid="uid://l7plyps38d7c"]
+[gd_scene load_steps=24 format=3 uid="uid://l7plyps38d7c"]
 
 [ext_resource type="Script" path="res://roach.gd" id="1_i7old"]
-[ext_resource type="Texture2D" uid="uid://ohhddtgvkn2b" path="res://art/idle/1_Rat_Idle.png" id="1_iday8"]
-[ext_resource type="Texture2D" uid="uid://chtxwbubnuthg" path="res://art/idle/2_Rat_Idle.png" id="2_socln"]
-[ext_resource type="Texture2D" uid="uid://bgefpki18sepi" path="res://art/idle/3_Rat_Idle.png" id="3_11iau"]
-[ext_resource type="Texture2D" uid="uid://bmg7detgav1bw" path="res://art/idle/4_Rat_Idle.png" id="4_uygev"]
+[ext_resource type="Texture2D" uid="uid://6caxo5j7rap5" path="res://art/c_attack_side/1_SideAttack_Cockroach.png" id="2_8prw1"]
+[ext_resource type="Texture2D" uid="uid://v5gaahl85stx" path="res://art/c_dead/1_Die_Cockroach.png" id="2_psrhc"]
+[ext_resource type="Texture2D" uid="uid://cm46mn786acdw" path="res://art/c_attack_side/2_SideAttack_Cockroach.png" id="3_v6oig"]
+[ext_resource type="Texture2D" uid="uid://m5cl3jude6vl" path="res://art/c_dead/2_Die_Cockroach.png" id="3_xo34f"]
+[ext_resource type="Texture2D" uid="uid://g81uu1fr64ih" path="res://art/c_dead/3_Die_Cockroach.png" id="4_6jhdq"]
+[ext_resource type="Texture2D" uid="uid://cvbiq4ajfwcgy" path="res://art/c_attack_side/3_SideAttack_Cockroach.png" id="4_lwiha"]
+[ext_resource type="Texture2D" uid="uid://ymrxro4lhgdy" path="res://art/c_dead/4_Die_Cockroach.png" id="5_33ost"]
+[ext_resource type="Texture2D" uid="uid://kbl2v8lm3m8e" path="res://art/c_attack_side/4_SideAttack_Cockroach.png" id="5_ir5a6"]
+[ext_resource type="Texture2D" uid="uid://bnlkawvqp1137" path="res://art/c_idle/1_Idle_Cockroach.png" id="6_1ix8b"]
+[ext_resource type="Texture2D" uid="uid://b88e2iqasbw0y" path="res://art/c_attack_side/5_SideAttack_Cockroach.png" id="6_mms16"]
+[ext_resource type="Texture2D" uid="uid://dj87itnawokfl" path="res://art/c_idle/2_Idle_Cockroach.png" id="7_2nwut"]
+[ext_resource type="Texture2D" uid="uid://dqtndpc2u0yn6" path="res://art/c_attack_side/6_SideAttack_Cockroach.png" id="7_4ebps"]
+[ext_resource type="Texture2D" uid="uid://0nqjlv0x4yt3" path="res://art/c_attack_side/7_SideAttack_Cockroach.png" id="8_6yh3s"]
+[ext_resource type="Texture2D" uid="uid://c8en2y0mh4god" path="res://art/c_idle/3_Idle_Cockroach.png" id="8_im5xf"]
+[ext_resource type="Texture2D" uid="uid://f023tacekf0f" path="res://art/c_attack_side/8_SideAttack_Cockroach.png" id="9_lc2yh"]
+[ext_resource type="Texture2D" uid="uid://5f3qeldul3u8" path="res://art/c_idle/4_Idle_Cockroach.png" id="9_ng75o"]
+[ext_resource type="Texture2D" uid="uid://q618chphh6io" path="res://art/c_attack_side/9_SideAttack_Cockroach.png" id="10_4vrng"]
+[ext_resource type="Texture2D" uid="uid://b1krmsan7iqy8" path="res://art/c_attack_side/10_SideAttack_Cockroach.png" id="11_1mjyl"]
+[ext_resource type="Texture2D" uid="uid://dciib4d8tnkkq" path="res://art/c_attack_side/11_SideAttack_Cockroach.png" id="12_e0q1p"]
+[ext_resource type="Texture2D" uid="uid://7fdn847qjrps" path="res://art/c_attack_side/12_SideAttack_Cockroach.png" id="13_8buog"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ups8b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_iday8")
+"texture": ExtResource("2_8prw1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_socln")
+"texture": ExtResource("3_v6oig")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_11iau")
+"texture": ExtResource("4_lwiha")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_uygev")
+"texture": ExtResource("5_ir5a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mms16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4ebps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6yh3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lc2yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4vrng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1mjyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e0q1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8buog")
+}],
+"loop": true,
+"name": &"attack_side",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_psrhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xo34f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6jhdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_33ost")
+}],
+"loop": true,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1ix8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2nwut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_im5xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ng75o")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 30.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hyy12"]
@@ -37,7 +111,9 @@ script = ExtResource("1_i7old")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ups8b")
-animation = &"idle"
+animation = &"attack_side"
+frame = 5
+frame_progress = 0.693774
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 17.5)

@@ -44,7 +44,6 @@ func _on_roach_timer_timeout() -> void:
 
 	# Add some randomness to the direction.
 	direction += randf_range(-PI / 4, PI / 4)
-	roach.rotation = direction
 
 	# Choose the velocity for the roach.
 	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
@@ -52,3 +51,7 @@ func _on_roach_timer_timeout() -> void:
 
 	# Spawn the roach by adding it to the Main scene.
 	add_child(roach)
+
+
+func _on_rat_kills(roach: Node2D) -> void:
+	roach.death()
