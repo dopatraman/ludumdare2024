@@ -1,5 +1,6 @@
 extends Area2D
 signal death
+signal kills
 
 @export var speed = 800 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
@@ -58,22 +59,25 @@ func _process(delta):
 
 
 func _on_body_entered(body: Node2D) -> void:
+	if Input.is_action_pressed("attack"):
+		rat_kills(body)
+	else:
+		rat_dies()
+
+func rat_dies():
 	is_dead = true
 	$AnimatedSprite2D.animation = "death"
 	$AnimatedSprite2D.play()
 	death.emit()
-	
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)
 	await get_tree().create_timer(0.5).timeout
 	$AnimatedSprite2D.stop()
 	hide()
 
-
-#func _on_animated_sprite_2d_animation_finished() -> void:
-	#if $AnimatedSprite2D.animation == 'death':
-		#death.emit()
-
+func rat_kills(body: Node2D):
+	is_dead = false
+	kills.emit(body)
 
 func start(pos):
 	position = pos

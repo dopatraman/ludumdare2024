@@ -12,9 +12,9 @@ loop = true
 
 [sub_resource type="Curve2D" id="Curve2D_87iti"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -600, -648, 0, 0, 0, 0, 2040, -664, 0, 0, 0, 0, 2032, 1216, 0, 0, 0, 0, -600, 1216, 0, 0, 0, 0, -600, -648)
+"points": PackedVector2Array(0, 0, 0, 0, -600, -648, 0, 0, 0, 0, 2040, -664, 0, 0, 0, 0, 2032, 1216, 0, 0, 0, 0, -600, 1216, 0, 0, 0, 0, -600, -648, 0, 0, 0, 0, -104, 1136, 0, 0, 0, 0, 296, -520, 0, 0, 0, 0, 784, 1008, 0, 0, 0, 0, 992, -480, 0, 0, 0, 0, 1592, 992, 0, 0, 0, 0, 1808, -472, 0, 0, 0, 0, -600, -648)
 }
-point_count = 5
+point_count = 12
 
 [node name="Main" type="Node"]
 script = ExtResource("1_blmmm")
@@ -46,16 +46,16 @@ texture = ExtResource("2_ncyl4")
 position = Vector2(517, 4)
 
 [node name="Camera2D" type="Camera2D" parent="Rat"]
+visible = false
 position_smoothing_enabled = true
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(664, 288)
 stream = SubResource("AudioStreamMP3_8ucoe")
 
 [node name="StartPosition" type="Marker2D" parent="."]
 
 [node name="StartScreen" parent="." instance=ExtResource("3_ly3oy")]
-offset = Vector2(200, 200)
-transform = Transform2D(1, 0, 0, 1, 200, 200)
 
 [node name="RoachPath" type="Path2D" parent="."]
 curve = SubResource("Curve2D_87iti")
@@ -68,5 +68,6 @@ rotation = -0.00606053
 wait_time = 2.0
 
 [connection signal="death" from="Rat" to="." method="game_over"]
+[connection signal="kills" from="Rat" to="." method="_on_rat_kills"]
 [connection signal="start_game" from="StartScreen" to="." method="_on_start_screen_start_game"]
 [connection signal="timeout" from="RoachTimer" to="." method="_on_roach_timer_timeout"]
