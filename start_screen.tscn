@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://ccihauj3fdxyb"]
+[gd_scene load_steps=9 format=4 uid="uid://ccihauj3fdxyb"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_y5jdy"]
 [ext_resource type="Texture2D" uid="uid://dkb4858kk0gkb" path="res://art/start_screen_textures/bricks.jpg" id="2_38gp4"]
 [ext_resource type="FontFile" uid="uid://cpetgmsbor1q6" path="res://fonts/Xolonium-Regular.ttf" id="2_h37dc"]
 [ext_resource type="Texture2D" uid="uid://bdm35f3cynopa" path="res://art/start_screen_textures/logo_blank.png" id="3_c0y3t"]
+[ext_resource type="FontFile" uid="uid://b4captgie31fl" path="res://fonts/LOKICOLA.TTF" id="5_thugi"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_g0xx0"]
 action = &"start_game"
@@ -49,13 +50,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -125.0
-offset_top = 14.0
-offset_right = 125.0
-offset_bottom = 114.0
+offset_left = 256.0
+offset_top = 404.0
+offset_right = 506.0
+offset_bottom = 504.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_h37dc")
+theme_override_fonts/font = ExtResource("5_thugi")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_5fod0")
 text = "Start"
