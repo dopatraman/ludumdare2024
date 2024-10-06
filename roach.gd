@@ -3,7 +3,7 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2D.play("attack_side")
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,7 +16,26 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 
 
 func death():
-	$AnimatedSprite2D.play("death")
+	$AnimatedSprite2D.animation = "death"
+	$AnimatedSprite2D.play()
 	await get_tree().create_timer(0.5).timeout
 	hide()
 	queue_free()
+
+func point_down():
+	$AnimatedSprite2D.animation = "attack_down"
+	$AnimatedSprite2D.play()
+
+func point_up():
+	$AnimatedSprite2D.animation = "attack_up"
+	$AnimatedSprite2D.play()
+
+func point_right():
+	$AnimatedSprite2D.flip_h = false
+	$AnimatedSprite2D.animation = "attack_side"
+	$AnimatedSprite2D.play()
+
+func point_left():
+	$AnimatedSprite2D.flip_h = true
+	$AnimatedSprite2D.animation = "attack_side"
+	$AnimatedSprite2D.play()

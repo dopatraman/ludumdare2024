@@ -71,4 +71,5 @@ stream = ExtResource("6_0q35i")
 
 [connection signal="start_game" from="StartScreen" to="." method="_on_start_screen_start_game"]
 [connection signal="death" from="Rat" to="." method="game_over"]
+[connection signal="kills" from="Rat" to="." method="_on_rat_kills"]
 [connection signal="timeout" from="RoachTimer" to="." method="_on_roach_timer_timeout"]
