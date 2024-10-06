@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://l7plyps38d7c"]
+
+[ext_resource type="Script" path="res://roach.gd" id="1_i7old"]
+[ext_resource type="Texture2D" uid="uid://ohhddtgvkn2b" path="res://art/idle/1_Rat_Idle.png" id="1_iday8"]
+[ext_resource type="Texture2D" uid="uid://chtxwbubnuthg" path="res://art/idle/2_Rat_Idle.png" id="2_socln"]
+[ext_resource type="Texture2D" uid="uid://bgefpki18sepi" path="res://art/idle/3_Rat_Idle.png" id="3_11iau"]
+[ext_resource type="Texture2D" uid="uid://bmg7detgav1bw" path="res://art/idle/4_Rat_Idle.png" id="4_uygev"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ups8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iday8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_socln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_11iau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uygev")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyy12"]
+size = Vector2(203, 219)
+
+[node name="Roach" type="RigidBody2D" groups=["roaches"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_i7old")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ups8b")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 17.5)
+shape = SubResource("RectangleShape2D_hyy12")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-17, 17.5)
+scale = Vector2(8.3, 10.55)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
