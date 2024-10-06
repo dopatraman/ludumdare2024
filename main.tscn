@@ -20,6 +20,9 @@ texture = ExtResource("2_ncyl4")
 
 [node name="Rat" parent="." instance=ExtResource("2_x8643")]
 
+[node name="Camera2D" type="Camera2D" parent="Rat"]
+position_smoothing_enabled = true
+
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamMP3_8ucoe")
 
