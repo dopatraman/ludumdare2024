@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 func game_over():
 	$Music.stop()
+	$GameOverDefeatSound.play()
 	$StartScreen.show_game_over()
 
 func new_game():
