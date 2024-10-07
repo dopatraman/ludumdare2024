@@ -55,6 +55,20 @@ func _on_roach_timer_timeout() -> void:
 	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
 	roach.linear_velocity = velocity.rotated(direction)
 
+	if direction >= (PI / 4) && direction < ((3*PI) / 4):
+		roach.point_down()
+	elif direction >= ((3*PI) / 4) && direction < ((5*PI) / 4):
+		roach.point_left()
+	elif direction >= ((5*PI) / 4) && direction < ((7*PI) / 4):
+		roach.point_up()
+	else:
+		roach.point_right()
+
+	# Check to see what direction the roach is facing
+	#if velocity.x >= 0:
+		#if velocity.x > velocity.y:
+			#roach.point_side()
+
 	# Spawn the roach by adding it to the Main scene.
 	add_child(roach)
 	$roachAppears.play()
