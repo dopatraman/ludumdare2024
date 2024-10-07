@@ -60,3 +60,4 @@ text = "Victory. Glory to Pizza!"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamMP3_3irqm")
+volume_db = 4.667
