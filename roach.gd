@@ -35,7 +35,7 @@ func playAttackNoise():
 func death():
 	$AnimatedSprite2D.animation = "death"
 	$AnimatedSprite2D.play()
-  playDeathNoise()
+	playDeathNoise()
 	await get_tree().create_timer(0.5).timeout
 	hide()
 	queue_free()

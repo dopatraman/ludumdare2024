@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://l7plyps38d7c"]
+[gd_scene load_steps=53 format=3 uid="uid://l7plyps38d7c"]
 
 [ext_resource type="Script" path="res://roach.gd" id="1_i7old"]
 [ext_resource type="Texture2D" uid="uid://boobjye58afn3" path="res://art/c_attack_down/1_AttackDown_Cockroach.png" id="2_3bqo1"]
@@ -33,7 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://dv0f7nvci6ff3" path="res://art/c_attack_down/11_AttackDown_Cockroach.png" id="12_hcf3x"]
 [ext_resource type="Texture2D" uid="uid://7fdn847qjrps" path="res://art/c_attack_side/12_SideAttack_Cockroach.png" id="13_8buog"]
 [ext_resource type="Texture2D" uid="uid://c5qkhqslkrs6b" path="res://art/c_attack_down/12_AttackDown_Cockroach.png" id="13_um6if"]
+[ext_resource type="AudioStream" uid="uid://befyqwgsjq1yv" path="res://sound/sound-fx_cockroach/Cockroach Stabbed 2 Death_KO.wav" id="22_c65xd"]
+[ext_resource type="AudioStream" uid="uid://dg0vj8qhoybrb" path="res://sound/sound-fx_cockroach/Roach Death - NEW.wav" id="23_vde0h"]
+[ext_resource type="AudioStream" uid="uid://6cgndvxjgc5g" path="res://sound/sound-fx_cockroach/Roach Death New - Alt.wav" id="24_yiwox"]
+[ext_resource type="AudioStream" uid="uid://dcke1qs5o4mfq" path="res://sound/sound-fx_cockroach/Roach Down Attack.wav" id="25_l75c6"]
 [ext_resource type="Texture2D" uid="uid://blc8bw71nmex1" path="res://art/c_attack_up/1_AttackUp_Cockroach.png" id="26_1xjjn"]
+[ext_resource type="AudioStream" uid="uid://c1wf71plrepop" path="res://sound/sound-fx_cockroach/Roach Side Attack- Saw Swish.wav" id="26_an65a"]
 [ext_resource type="Texture2D" uid="uid://b6m3asmuyln5s" path="res://art/c_attack_up/2_AttackUp_Cockroach.png" id="27_v6bs5"]
 [ext_resource type="Texture2D" uid="uid://div6xury6yje2" path="res://art/c_attack_up/3_AttackUp_Cockroach.png" id="28_64xkc"]
 [ext_resource type="Texture2D" uid="uid://7pisl3073j4o" path="res://art/c_attack_up/4_AttackUp_Cockroach.png" id="29_4xwya"]
@@ -45,11 +50,6 @@
 [ext_resource type="Texture2D" uid="uid://b1gme5pqwkd7f" path="res://art/c_attack_up/10_AttackUp_Cockroach.png" id="35_i5a8n"]
 [ext_resource type="Texture2D" uid="uid://j6uqlkifncjt" path="res://art/c_attack_up/11_AttackUp_Cockroach.png" id="36_5d0js"]
 [ext_resource type="Texture2D" uid="uid://i25dqnex1ukn" path="res://art/c_attack_up/12_AttackUp_Cockroach.png" id="37_2dlie"]
-[ext_resource type="AudioStream" uid="uid://befyqwgsjq1yv" path="res://sound/sound-fx_cockroach/Cockroach Stabbed 2 Death_KO.wav" id="22_c65xd"]
-[ext_resource type="AudioStream" uid="uid://dg0vj8qhoybrb" path="res://sound/sound-fx_cockroach/Roach Death - NEW.wav" id="23_vde0h"]
-[ext_resource type="AudioStream" uid="uid://6cgndvxjgc5g" path="res://sound/sound-fx_cockroach/Roach Death New - Alt.wav" id="24_yiwox"]
-[ext_resource type="AudioStream" uid="uid://dcke1qs5o4mfq" path="res://sound/sound-fx_cockroach/Roach Down Attack.wav" id="25_l75c6"]
-[ext_resource type="AudioStream" uid="uid://c1wf71plrepop" path="res://sound/sound-fx_cockroach/Roach Side Attack- Saw Swish.wav" id="26_an65a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ups8b"]
 animations = [{
