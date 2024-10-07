@@ -20,7 +20,13 @@ func game_over():
 	#add game over victory sound + logic for victory
 	#GameOverVictorySound.play()
 
+func victory():
+	$Music.stop()
+	$CaveAmbience.stop()
+	$VictoryScreen.activate()
+	
 func new_game():
+	$VictoryScreen.mute()
 	score = 0
 	$Music.play()
 	$CaveAmbience.play()
@@ -75,4 +81,11 @@ func _on_roach_timer_timeout() -> void:
 
 
 func _on_rat_kills(roach: Node2D) -> void:
+	score += 1
 	roach.death()
+	if (score == 10):
+		victory()
+
+
+func _on_victory_screen_restart_game() -> void:
+	new_game()
